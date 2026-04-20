@@ -28,10 +28,37 @@ USAGE EXAMPLE:
   .slide {
     height: 100%;
     flex: 0 0 100%;
-    background: black;
+    background:
+      radial-gradient(circle at 18% 22%, rgba(0, 104, 71, 0.25), transparent 40%),
+      radial-gradient(circle at 80% 78%, rgba(206, 17, 38, 0.22), transparent 42%),
+      linear-gradient(160deg, #2a160e 0%, #130d0a 58%, #250e13 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+
+  .slide::before,
+  .slide::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+      90deg,
+      #006847 0 24px,
+      #f6efe2 24px 48px,
+      #ce1126 48px 72px
+    );
+  }
+
+  .slide::before {
+    top: 0;
+  }
+
+  .slide::after {
+    bottom: 0;
   }
 
   .content {
@@ -39,6 +66,11 @@ USAGE EXAMPLE:
     padding: 2rem;
     color: white;
     text-align: center;
+    background: rgba(12, 10, 9, 0.8);
+    border-radius: 6px;
+    border-top: 4px solid #006847;
+    border-bottom: 4px solid #ce1126;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   }
 
   h2 {

@@ -151,11 +151,25 @@ html {
 }
 
 body {
+  /* Mexico-inspired palette overrides (kept outside :root tokens) */
+  --color-accent: #ce1126;
+  --color-cuny-blue-dark: #006847;
+  --color-cuny-blue-light: #ce1126;
+  --color-dark: #2f1a12;
+  --color-text: #3b2a1f;
+  --color-light-gray: #fff7ed;
+  --color-medium-gray: #7a5b43;
+  --color-border: #e8d3bb;
+
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   line-height: var(--leading-normal);
   color: var(--color-text);
-  background-color: var(--color-white);
+  background-color: #fff7ed;
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(0, 104, 71, 0.08) 0 12%, transparent 12.5%),
+    radial-gradient(circle at 88% 80%, rgba(206, 17, 38, 0.08) 0 11%, transparent 11.5%),
+    linear-gradient(180deg, rgba(255, 243, 224, 0.65), rgba(255, 255, 255, 0.92));
 }
 /* ===========================================
    Typography

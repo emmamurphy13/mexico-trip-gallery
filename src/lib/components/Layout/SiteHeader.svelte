@@ -76,15 +76,33 @@ SiteHeader.svelte — NYCity News Service Style Header
   .site-header {
     border-bottom: 0px solid var(--color-accent);
     box-shadow: 0 2px 4px var(--color-shadow);
+    position: relative;
   }
 
-  /* Full-width blue background with animated dark-to-light gradient */
+  .site-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      #006847 0%,
+      #ffffff 50%,
+      #ce1126 100%
+    );
+  }
+
+  /* Full-width Mexico palette gradient */
   .masthead-wrapper {
     background: linear-gradient(
       90deg,
-      var(--color-cuny-blue-dark) 0%,
-      var(--color-accent) 50%,
-      var(--color-cuny-blue-light) 100%
+      #005c3d 0%,
+      #0f7a51 28%,
+      #f7f1e8 52%,
+      #b71c2d 76%,
+      #8f1121 100%
     );
     background-size: 200% 100%;
     animation: gradient-sweep 6s ease-in-out infinite;

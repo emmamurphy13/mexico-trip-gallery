@@ -189,13 +189,25 @@ USAGE EXAMPLE:
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: white;
+    background: #f6efe2;
     opacity: 0.4;
     transition: opacity 0.2s ease;
   }
 
+  .dot:nth-child(3n + 1) {
+    background: #006847;
+  }
+
+  .dot:nth-child(3n + 2) {
+    background: #f6efe2;
+  }
+
+  .dot:nth-child(3n + 3) {
+    background: #ce1126;
+  }
+
   .dot.active {
     opacity: 1;
-    background: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.65);
   }
 </style>

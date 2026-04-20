@@ -13,14 +13,23 @@ USAGE EXAMPLE:
 />
 -->
 <script>
+  import { base } from '$app/paths';
+
   let {
     headline, // The main gallery title
     intro, // Introductory text below the headline
     byline, // Author attribution
+    backgroundFilename = null, // Optional background photo filename from /static/photos
   } = $props();
 </script>
 
-<div class="slide" data-slide>
+<div
+  class="slide"
+  data-slide
+  style={backgroundFilename
+    ? `background-image: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)), url('${base}/photos/${backgroundFilename}')`
+    : undefined}
+>
   <div class="masthead">
     <a
       href="https://www.nycitynewsservice.com/"
@@ -48,9 +57,37 @@ USAGE EXAMPLE:
   .slide {
     height: 100%;
     flex: 0 0 100%;
-    background: black;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+
+  .slide::before,
+  .slide::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    z-index: 6;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      90deg,
+      #006847 0 24px,
+      #f6efe2 24px 48px,
+      #ce1126 48px 72px
+    );
+  }
+
+  .slide::before {
+    top: 0;
+  }
+
+  .slide::after {
+    bottom: 0;
   }
 
   .masthead {
@@ -59,9 +96,11 @@ USAGE EXAMPLE:
     padding: var(--spacing-xs) var(--spacing-sm);
     background: linear-gradient(
       90deg,
-      var(--color-cuny-blue-dark) 0%,
-      var(--color-accent) 50%,
-      var(--color-cuny-blue-light) 100%
+      #005c3d 0%,
+      #0f7a51 30%,
+      #f7f1e8 52%,
+      #b71c2d 76%,
+      #8f1121 100%
     );
     background-size: 200% 100%;
     animation: gradient-sweep 6s ease-in-out infinite;
@@ -140,6 +179,13 @@ USAGE EXAMPLE:
     padding: 2rem;
     color: white;
     text-align: center;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.42) 0%,
+      rgba(0, 0, 0, 0.64) 100%
+    );
+    border-top: 3px solid rgba(0, 104, 71, 0.72);
+    border-bottom: 3px solid rgba(206, 17, 38, 0.72);
   }
 
   h1 {

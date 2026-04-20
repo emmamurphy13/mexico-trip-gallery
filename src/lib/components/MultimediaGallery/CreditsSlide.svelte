@@ -28,16 +28,48 @@ USAGE EXAMPLE:
   .slide {
     height: 100%;
     flex: 0 0 100%;
-    background: black;
+    background:
+      radial-gradient(circle at 16% 20%, rgba(0, 104, 71, 0.24), transparent 38%),
+      radial-gradient(circle at 84% 76%, rgba(206, 17, 38, 0.2), transparent 40%),
+      linear-gradient(160deg, #1f140f 0%, #120d0b 55%, #1e0d12 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+
+  .slide::before,
+  .slide::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+      90deg,
+      #006847 0 24px,
+      #f6efe2 24px 48px,
+      #ce1126 48px 72px
+    );
+  }
+
+  .slide::before {
+    top: 0;
+  }
+
+  .slide::after {
+    bottom: 0;
   }
 
   .content {
     max-width: 600px;
     padding: 2rem;
     color: white;
+    background: rgba(8, 8, 8, 0.82);
+    border-radius: 6px;
+    border-left: 4px solid #006847;
+    border-right: 4px solid #ce1126;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   }
 
   .content :global(h2) {

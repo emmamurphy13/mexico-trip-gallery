@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "type": "photo",
+    "filename": "jpegmini_optimized-2/IMG_0179.jpg",
+    "title": "Puerto Vallarta beach",
+    "caption": "Ashley, Celia, Emma, Macy, and Emily drink margs on a Puerto Vallarta beach.",
+    "credit": "Emma Murphy",
+    "imageSide": "right"
+  },
+  {
+    "id": 2,
+    "type": "photo",
+    "filename": "jpegmini_optimized-2/2.jpg",
+    "caption": "They went cliff jumping and snorkeling. Their tour guide invited them to hang out with his friends that night and they explored the city.",
+    "captionStyle": "center-box"
+  },
+  {
+    "id": 3,
+    "type": "photo",
+    "filename": "jpegmini_optimized-2/IMG_5238.jpg",
+    "caption": "Everynight the sunsets in Puerto Vallarta looked like this.",
+    "captionStyle": "full-bleed"
+  },
+  {
+    "id": 4,
+    "type": "double-photo",
+    "leftFilename": "jpegmini_optimized-2/IMG_5634.jpg",
+    "rightFilename": "jpegmini_optimized-2/IMG_5398.jpg",
+    "caption": "They went to Mexico city and saw beautiful architecture and other sights."
+  },
+  {
+    "id": 5,
+    "type": "photo",
+    "filename": "jpegmini_optimized-2/IMG_5465.jpg",
+    "title": "Trotsky's Home in Coyoacán",
+    "caption": "Leon Trotsky's home in Coyaocan was one of the best parts of the trip. It was left in the exact condition of when the communist lived there and the surronding area was gorgeous.",
+    "credit": "Emma Murphy",
+    "captionStyle": "center-box"
+  },
+  {
+    "id": 6,
+    "type": "photo",
+    "filename": "jpegmini_optimized-2/IMG_5654_2.jpg",
+    "caption": "The pyrmids were amazing but the tour was two and a half hours long, which was a little excessive.",
+    "captionStyle": "banner-box"
+  },
+  {
+    "id": 7,
+    "type": "photo",
+    "filename": "jpegmini_optimized-2/IMG_5602.jpg",
+    "caption": "The tour guide recommended eating tamales as an authentic indigenous food. This restaurant focused on corn in both tamales and tortillas as a nod to mexican culture.",
+    "captionStyle": "split-panel"
+  },
+  {
+    "id": 8,
+    "type": "photo",
+    "filename": "jpegmini_optimized-2/IMG_5643.jpg",
+    "caption": "After 7 full days in Mexico, the girls left on a red eye back to New York City.",
+    "captionStyle": "split-panel"
+  }
+]

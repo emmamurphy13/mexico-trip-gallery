@@ -246,7 +246,14 @@ USAGE EXAMPLE:
   }
 
   .footer-main {
-    background-color: var(--color-cuny-blue-dark);
+    background: linear-gradient(
+      115deg,
+      #0b5e3f 0%,
+      #0f7a51 32%,
+      #1b1b1b 58%,
+      #9e1829 82%,
+      #7f0f1d 100%
+    );
     padding: var(--spacing-xl) var(--spacing-md);
   }
 
@@ -334,9 +341,10 @@ USAGE EXAMPLE:
 
   /* Bottom copyright bar */
   .footer-bottom {
-    background-color: var(--color-cuny-blue-dark);
+    background: linear-gradient(90deg, #0a4f35 0%, #111111 50%, #7f0f1d 100%);
     padding: var(--spacing-sm) var(--spacing-md);
     text-align: center;
+    border-top: 2px solid rgba(247, 241, 232, 0.2);
   }
 
   .footer-copyright {
